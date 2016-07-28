@@ -1,0 +1,27 @@
+/* ==========================================================================
+	HELPER CLASSES   
+========================================================================== */
+
+
+/* Misc.
+-------------------------------------------------------------- */
+
+// hide element completely
+.is-hidden {
+    display: none !important;
+    visibility: hidden;
+    @include opacity(0);
+}
+
+// vissualy hide element, but keep it available for screen readers
+.is-visually-hidden,
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

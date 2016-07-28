@@ -1,0 +1,36 @@
+/* ==========================================================================
+	LAYOUT STYLES (box-sizing: border-box)
+========================================================================== */
+.wrap {
+	margin: 0 auto;
+	max-width: $container-width;
+	padding: 0 2%;
+}
+
+.wrap-large {
+	margin: 0 auto;
+	max-width: $container-width-large;
+	position: relative;
+	padding: 0 2%;
+}
+
+
+@include mq-medium {
+	.previous-episodes {
+		@include outer-container;
+		.episode-box {
+			@include span-columns(6);
+			@include omega(2n);
+		}
+		h3 {
+			@include span-columns(12);	
+		}
+	}
+	.info-box {
+		@include outer-container;
+		.contact-box {
+			@include span-columns(6);
+			@include omega(2n);
+		}
+	}
+}

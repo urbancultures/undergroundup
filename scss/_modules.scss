@@ -1,0 +1,432 @@
+/* ==========================================================================
+	MODULE STYLING
+========================================================================== */
+
+/* Buttons
+-------------------------------------------------------------- */
+button,
+.btn,
+a.btn {
+	background: $white;
+	color: $gray-dark;
+	border: none;
+	border: 1px solid $gray-dark;
+	display: block;
+	margin: 0 auto;
+	font-family: $font-family-primary;
+	font-size: 0.75em;
+	font-weight: bold;
+	padding: 0.4rem 1.6rem;
+	text-align: center;
+	text-decoration: none !important; // force no underline even when different styles applied later on
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: auto;
+	@include border-radius(4px);
+	@include easing-animation;
+	&:hover {
+		background-color: $gray-dark;
+		border-color: $white;
+		color: $white;
+		font-weight: bold;
+		@include easing-animation;
+	}
+	@include mq-medium {
+		margin-right: 0;
+	}
+}
+
+
+
+.btn-facebook img {
+	max-width: 240px;
+	margin-bottom: 1.5rem;
+	@include easing-animation;
+	@include opacity(0.7);
+	&:hover {
+		@include opacity(1);
+	}
+}
+
+a.btn-facebook {
+	border: none;
+}
+
+.btn-instagram img {
+	@include easing-animation;
+	@include opacity(0.8);
+	&:hover {
+		@include opacity(1);
+	}
+}
+
+
+/* Header
+-------------------------------------------------------------- */
+.top-bar {
+	height: 110px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $layer-5;
+}
+
+.top-bar-sticky {
+	background-color: $white;
+	height: 60px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $layer-5;
+	
+	@include mq-medium {
+		height: 80px;	
+	}
+}
+
+.logo {
+	border-color: $black;
+	border-style: solid;
+	display: table;	
+	line-height: 0;
+	margin: 1.5rem auto;
+	text-align: center;
+	border-width: 5px 2px 5px 2px;
+	font-size: 16px;
+	height: 54px;
+	width: 175px;
+	@include mq-medium {
+		border-width: 7px 2px 7px 2px;
+		height: 94px;
+		width: 305px;
+		font-size: 33px;
+	}
+	
+}
+
+.logo a {
+	border: none;
+	color: $black;
+	display: table-cell;
+	line-height: 0;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.top-bar-sticky .logo {
+	margin-top: 0.6rem;
+	border-width: 4px 2px 4px 2px;
+	font-size: 11px;
+	height: 41px;
+	width: 132px;
+	@include mq-medium {
+		border-width: 5px 2px 5px 2px;
+		font-size: 16px;
+		height: 54px;
+		width: 175px;
+	}
+	
+}
+
+.top-bar-sticky .logo a {
+	border: none;
+	color: $black;
+	display: table-cell;
+	line-height: 0;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+
+/* Section modules
+-------------------------------------------------------------- */
+.section-title {
+	text-align: center;
+}
+
+.section-title h2 {
+	text-transform: uppercase;
+	display: inline-block;
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+	border-bottom: 4px solid $black;
+	padding: 0 2rem;
+	padding-bottom: 0.3rem;
+}
+
+
+/* Hero
+-------------------------------------------------------------- */
+//.hero {
+//	background-image: url('../img/bg-1.png');
+//	@include fluid-ratio(2 3, 16 9);
+//	@include mq-medium {
+//		background-attachment: fixed;
+//	}
+//	@include opacity(0.9);
+//}
+.hero {
+	background-image: url('../img/bg-1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 200px;
+	background-position: center top;
+	@include mq-medium {
+		background-size: cover;
+		height: 660px;
+		background-position: center bottom;
+	}
+}
+
+
+/* About
+-------------------------------------------------------------- */
+
+.intro-text {
+	margin-bottom: 0.5rem;
+	margin-top: 1.5rem;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	@include mq-medium {
+		font-size: 2rem;
+		margin-top: 3.5rem;
+	}
+}
+
+.about-text {
+	text-align: center;
+	font-size: 1.1rem;
+	@include mq-medium {
+		font-size: 1.4rem;	
+	}
+}
+
+/* Episodes
+-------------------------------------------------------------- */
+.previous-episodes-title {
+	margin-top: 3rem;
+}
+
+.episode-box {
+	margin-top: 1rem;
+	@include mq-medium {
+		margin-top: 0;
+	}
+}
+
+.episode-text {
+	font-size: 0.9em;
+	margin-top: 0.5em;
+}
+
+.episode-title {
+	font-family: $font-family-primary;
+	text-transform: uppercase;
+	margin: 0.5em 0 0 0;
+}
+
+.latest-episode .episode-text {
+//	@include columns(2, 1.2em);
+}
+
+/* Info
+-------------------------------------------------------------- */
+#info {
+
+}
+
+// contact box
+.contact-box p:last-of-type {
+	margin-bottom: 0.5em;
+}
+
+.email-box {
+	margin-top: 2rem;
+	text-align: center;
+	@include clearfix;
+}
+
+.email-box p {
+	margin-bottom: 0.5rem;	
+}
+
+.email-box form {
+	margin: 0 auto;
+	@include mq-medium {
+		max-width: 50%;	
+	}
+}
+
+.email-box input {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	height: 2.5rem;
+	border: 2px solid $gray-light;
+	border-radius: 4px;
+	padding: 0 0.3rem;
+	@include mq-medium {
+		display: inline-block;
+		width: 60%;
+		float: left;
+	}
+}
+
+.email-box .btn {
+	margin-top: 1rem;
+	height: 2.5rem;
+	@include mq-medium {
+		display: inline-block;
+//		 width: 38%;
+		float: left;
+		margin: 0 0 0 1rem;	
+	}
+}
+
+
+.social-box {
+	text-align: center;
+	margin-top: 2.5rem;
+}
+
+// events
+.event-box {
+	clear: both;
+	margin-top: 2rem;
+	width: 100%;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.event-date {
+	background-color: $gray-lightest;
+	border: 1px solid $gray;
+	display: inline-block;
+	float: left;
+	height: 5rem;
+	margin-right: 0.7rem;
+	padding: 0;
+	text-align: center;
+	vertical-align: top;
+	width: 5rem;
+	@include border-radius(0.4rem);
+}
+
+.event-month {
+	background-color: $pomegranate;
+	height: 2rem;
+	text-transform: uppercase;
+	color: $white;
+	@include border-radius-top(0.4rem);
+}
+
+
+.event-day {
+	font-size: 2rem;
+	color: $gray-medium;
+}
+
+.event-title {
+	display: inline-block;
+	font-family: $font-family-primary;
+	margin: 0;
+}
+
+.event-info {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.event-location {
+	display: inline-block;
+	font-size: 1.1rem;
+	color: $gray-medium;
+}
+
+.event-location a {
+	text-decoration: none;
+}
+
+.event-time {
+	display: inline-block;
+	font-size: 0.9rem;
+	margin-left: 1rem;
+	font-weight: bold;
+}
+
+.event-price {
+	display: inline-block;
+	font-size: 0.75rem;
+	margin-left: 1rem;
+}
+
+.event-extra {
+	font-size: 0.95rem;
+	font-style: italic;
+}
+
+/* Instagram
+-------------------------------------------------------------- */
+#instafeed {
+	@include outer-container;	
+}
+
+.instagram-pic {
+	@include span-columns(4);
+	@include omega(3n);
+	margin-top: 1.2rem;
+	@include opacity(0.8);
+	&:hover {
+		@include opacity(1);	
+	}
+}
+
+.see-more-instagram {
+	text-align: center;
+	margin-top: 1.5rem;
+}
+
+/* Footer
+-------------------------------------------------------------- */
+
+.credits {
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.credits h3 {
+	margin-bottom: 1.5em; 
+}
+
+.credits img {
+	max-width: 50%;
+	@include opacity(0.7);
+	@include easing-animation;
+	@include mq-medium {
+		margin: 0 3rem;
+		max-width: 25%;
+	}
+	&:hover {
+		@include easing-animation;
+		@include opacity(1);
+	}
+}
+
+.footer {
+	padding-bottom: 2rem;
+}
+
+.copyright {
+	font-size: 0.9rem;
+	font-style: italic;
+	margin-top: 2.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+

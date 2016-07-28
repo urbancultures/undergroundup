@@ -1,0 +1,149 @@
+/* ==========================================================================
+	PROJECT MIXINS   
+========================================================================== */
+
+/* Styling
+-------------------------------------------------------------- */
+
+// borders
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-radius-top ($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-radius-top-left: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-radius-top-right: $radius;
+}
+
+@mixin border-radius-bottom ($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-radius-bottom-left: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-radius-bottom-right: $radius;
+}
+
+@mixin border-radius-right ($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+    border-radius-bottom-right: $radius;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+    border-radius-top-right: $radius;
+}
+
+
+// rotate
+@mixin rotate($val) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+
+// background size
+@mixin background-size($bg-size) {
+  -webkit-background-size: $bg-size;
+  -moz-background-size: $bg-size;
+  -o-background-size: $bg-size;
+  background-size: $bg-size;
+}
+
+// columns
+@mixin columns($count: 2, $gap: 20) {
+  -webkit-column-count: $count;
+  -moz-column-count:    $count;
+  column-count:         $count;
+
+  -webkit-column-gap:   $gap;
+  -moz-column-gap:      $gap;
+  column-gap:           $gap;
+}
+
+
+/* Animations
+-------------------------------------------------------------- */
+@mixin easing-animation($duration:0.3s) {
+	-webkit-transition: all $duration ease-out;
+    -moz-transition: all $duration ease-out;
+    -ms-transition: all $duration ease-out;
+    -o-transition: all $duration ease-out;
+    transition: all $duration ease-out;
+}
+
+
+/* Opacity
+-------------------------------------------------------------- */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); // IE8
+}
+
+
+/* Aspect ratio
+-------------------------------------------------------------- */
+@mixin maintain-ratio($ratio: 1 1) {
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn "$ratio must be a list with two values.";
+  }
+ 
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
+
+@mixin fluid-ratio($large-size, $small-size) {
+  $width-large: nth($large-size, 1);
+  $width-small: nth($small-size, 1);
+  $height-large: nth($large-size, 2);
+  $height-small: nth($small-size, 2);
+  $slope: ($height-large - $height-small) / ($width-large - $width-small);
+  $height: $height-small - $width-small * $slope;
+
+  padding-top: $slope * 100%;
+  height: $height;
+
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+}
+
+
+/* Media queries
+-------------------------------------------------------------- */
+@mixin mq-small {
+  @media only screen and (max-width: $bp-small) {
+    @content;
+  }
+}
+
+@mixin mq-medium {
+  @media only screen and (min-width: $bp-medium) {
+    @content;
+  }
+}
+
+@mixin mq-large {
+  @media only screen and (min-width: $bp-large) {
+    @content;
+  }
+}
+
+@mixin mq-retina {
+  @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {  
+    @content;
+  }
+}

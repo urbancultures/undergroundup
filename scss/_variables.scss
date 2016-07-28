@@ -1,0 +1,134 @@
+/* ==========================================================================
+	PROJECT VARIABLES   
+========================================================================== */
+
+/* Colors
+-------------------------------------------------------------- */
+// BW
+$black: #000;
+$white: #fff;
+
+// Grays
+$gray: #888;
+$gray-light: #ddd;
+$gray-lightest: #fafafa;
+$gray-dark: #333;
+$gray: #acb5b5;
+$gray-medium: #3e4646; // medium shade of $gray http://0to255.com/acb5b5
+$gray-dark: #2e3434; // darker shade of $gray http://0to255.com/acb5b5
+
+// Flat UI
+$turquoise: #1abc9c;
+$green-sea: #16a085;
+
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+
+$wet-asphalt: #34495e;
+$midnight-blue: #2c3e50;
+
+$sun-flower: #f1c40f;
+$orange: #f39c12;
+
+$carrot: #e67e22;
+$pumpkin: #d35400;
+
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+
+// Social colors
+$social-linkedin: #0072b5;
+$social-googleplus: #2d2d2d;
+$social-facebook: #2f4b93;
+$social-twitter: #00bdef;
+$social-instagram: #517fa4;
+
+
+
+/* Default colors
+-------------------------------------------------------------- */
+$text-color-primary: $gray-dark; // default text color
+$text-color-secondary: $gray-dark; // for headings
+
+$bg-primary: $white;
+
+$link-color: $gray-medium;
+$link-color-secondary: $black;
+
+
+/* Fonts
+-------------------------------------------------------------- */
+@font-face {
+    font-family: 'joe182regular';
+    src: url('../fonts/underup-font-webfont.eot');
+    src: url('../fonts/underup-font-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/underup-font-webfont.woff2') format('woff2'),
+         url('../fonts/underup-font-webfont.woff') format('woff'),
+         url('../fonts/underup-font-webfont.ttf') format('truetype'),
+         url('../fonts/underup-font-webfont.svg#joe182regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$proxima-nova: "proxima-nova", "HelveticaNeue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+$brandon-grotesque: "brandon-grotesque", "HelveticaNeue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+$joe182regular: "joe182regular", "HelveticaNeue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+
+
+// TypeKit font-weight scale
+$text-light: 300;
+$text-book: 400;
+$text-medium: 500;
+$text-semibold: 600;
+$text-bold: 700;
+$text-black: 900;
+
+
+/* Fonts defaults
+-------------------------------------------------------------- */
+$font-family-primary: $brandon-grotesque;
+$font-family-secondary: $joe182regular;
+
+
+/* Breaking points
+-------------------------------------------------------------- */
+$bp-x-small: 18.75em; // 300px
+$bp-small: 35em; // 560px
+$bp-medium: 47.5em; // 760px
+$bp-large: 63em; // 1008px
+$bp-x-large : 110em; // 1760px
+
+
+/* Z-index scale
+-------------------------------------------------------------- */
+$layer-1: 1 !important;
+$layer-2: 10 !important;
+$layer-3: 100 !important;
+$layer-4: 1000 !important;
+$layer-5: 10000 !important;
+
+$sub-layer-1: -1 !important;
+$sub-layer-2: -10 !important;
+$sub-layer-3: -100 !important;
+$sub-layer-4: -1000 !important;
+$sub-layer-5: -10000 !important;
+
+
+/* Misc.
+-------------------------------------------------------------- */
+$container-width: 960px;
+$container-width-large: 1280px;
+
+

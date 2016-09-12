@@ -13,7 +13,7 @@ $(document).ready(function() {
 			}
 		}
 	});
-	
+
 	function fetchVimeoThumb() {
 
 	  $('.vimeo-player').each(function() {
@@ -67,9 +67,9 @@ $(document).ready(function() {
 
 	// instafeed
 	var userFeed = new Instafeed({
+		clientId: 'daed6d2cf8b8423994a3766d76858200',
 		get: 'user',
-		userId: 839472152,
-		accessToken: '839472152.467ede5.84d17f1280d14906a905f343b0761572',
+		userId: 1482676723,
 		limit: 9,
 		resolution: 'low_resolution',
 		template: '<a href="{{link}}" target="_blank" class="instagram-pic"><img src="{{image}}" /></a>'

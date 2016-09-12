@@ -65,15 +65,4 @@ $(document).ready(function() {
 	var s = skrollr.init();
 
 
-	// instafeed
-	var userFeed = new Instafeed({
-		accessToken: '185311.1677ed0.7dbce0d149aa49c897b51b450552edbc',
-		get: 'user',
-		userId: 1482676723,
-		limit: 9,
-		resolution: 'low_resolution',
-		template: '<a href="{{link}}" target="_blank" class="instagram-pic"><img src="{{image}}" /></a>'
-	});
-	userFeed.run();
-
 });

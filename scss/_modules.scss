@@ -285,6 +285,22 @@ a.btn-facebook {
 .social-box {
 	text-align: center;
 	margin-top: 2.5rem;
+
+	a {
+		display: inline-block;
+		margin-bottom: 2.5rem;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@include mq-medium {
+			margin-bottom: 0;
+			margin-right: 2.5rem;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 // events

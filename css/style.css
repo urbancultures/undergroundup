@@ -926,6 +926,17 @@ a.btn-facebook {
 .social-box {
   text-align: center;
   margin-top: 2.5rem; }
+  .social-box a {
+    display: inline-block;
+    margin-bottom: 2.5rem; }
+    .social-box a:last-of-type {
+      margin-bottom: 0; }
+    @media only screen and (min-width: 47.5em) {
+      .social-box a {
+        margin-bottom: 0;
+        margin-right: 2.5rem; }
+        .social-box a:last-of-type {
+          margin-right: 0; } }
 
 .event-box {
   clear: both;

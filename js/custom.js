@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 	// instafeed
 	var userFeed = new Instafeed({
-		clientId: 'daed6d2cf8b8423994a3766d76858200',
+		accessToken: '185311.1677ed0.7dbce0d149aa49c897b51b450552edbc',
 		get: 'user',
 		userId: 1482676723,
 		limit: 9,

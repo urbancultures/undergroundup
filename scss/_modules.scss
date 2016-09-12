@@ -119,7 +119,7 @@ a.btn-facebook {
 	margin-top: 0.6rem;
 	border-width: 4px 2px 4px 2px;
 	font-size: 11px;
-	height: 48px;
+	height: 41px;
 	width: 132px;
 	@include mq-medium {
 		border-width: 5px 2px 5px 2px;
@@ -159,14 +159,7 @@ a.btn-facebook {
 
 /* Hero
 -------------------------------------------------------------- */
-//.hero {
-//	background-image: url('../img/bg-1.png');
-//	@include fluid-ratio(2 3, 16 9);
-//	@include mq-medium {
-//		background-attachment: fixed;
-//	}
-//	@include opacity(0.9);
-//}
+
 .hero {
 	background-image: url('../img/bg-1.png');
 	background-size: contain;
@@ -212,8 +205,9 @@ a.btn-facebook {
 }
 
 .episode-box {
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	@include mq-medium {
+		margin-bottom: 2rem;
 		margin-top: 0;
 	}
 }

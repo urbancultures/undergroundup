@@ -791,7 +791,7 @@ a.btn-facebook {
   margin-top: 0.6rem;
   border-width: 4px 2px 4px 2px;
   font-size: 11px;
-  height: 48px;
+  height: 41px;
   width: 132px; }
   @media only screen and (min-width: 47.5em) {
     .top-bar-sticky .logo {
@@ -863,9 +863,10 @@ a.btn-facebook {
   margin-top: 3rem; }
 
 .episode-box {
-  margin-top: 1rem; }
+  margin-top: 1.5rem; }
   @media only screen and (min-width: 47.5em) {
     .episode-box {
+      margin-bottom: 2rem;
       margin-top: 0; } }
 
 .episode-text {
